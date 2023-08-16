@@ -1,0 +1,10 @@
+.oculta{
+    display :none
+}
+.exibe {
+    display: inline;
+}
+
+.italico {
+    font-size: italic;
+}

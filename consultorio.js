@@ -18,7 +18,7 @@ frm.addEventListener("submit", (e) => {
     frm.inPaciente.value = "";
     frm.inPaciente.focus();
 })
-
+//----------------ENTRADAS DAS URGENCIAS-----------
 frm.btnUrgencia.addEventListener("click" , () => {
     if(!frm.checkValidity()){
         alert("informe o nome do paciente a ser atendido com urgencia")
@@ -43,25 +43,21 @@ frm.btnUrgencia.addEventListener("click" , () => {
     frm.inPaciente.value = "";
     frm.inPaciente.focus();
 })
+//-------------LIMPAR OS ATENDIMENTOS------------
 
 frm.btnAtender.addEventListener("click", () => {
     if(pacientes.length==0){
         alert("não há pacientes para atender")
         frm.inPaciente.focus();
+        respNome.innerText="";
         return
     }
     const atender = pacientes.shift();
     respNome.innerText = atender;
     let lista = "";
-    pacientes.forEach((paciente, i ) => (lista +=`${ i + 1 }- ${paciente[i]}\n`));
+    pacientes.forEach((paciente, i ) => (lista +=`${ i + 1 }. ${pacientes[i]}\n`));
     respLista.innerText = lista;
     
-    for (let i =0;i< pacientes.length; i++){
-        lista+=`${i + 1}- ${pacientes [i]}\n`
-    }
-
-   
-    
-    frm.inPaciente.value = "";
+  
     
 })
