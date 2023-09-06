@@ -19,7 +19,7 @@ frm.addEventListener("submit", (e) => {
     frm.inPaciente.focus();
 })
 //----------------ENTRADAS DAS URGENCIAS-----------
-frm.btnUrgencia.addEventListener("click" , () => {
+ /frm.btnUrgencia.addEventListener("click" , () => {
     if(!frm.checkValidity()){
         alert("informe o nome do paciente a ser atendido com urgencia")
         frm.inPaciente.focus();
