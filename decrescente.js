@@ -12,7 +12,7 @@ frm.addEventListener("submit", (e) => {
 
     let resposta = ""
     
-    //criar um laço de repetição iniciando de 1 até 10
+    //criar um laço di repetição iniciando de 1 até 10
     for (let i = numero; i>=0; i--) {
         resposta +=  i + "\n";
         
